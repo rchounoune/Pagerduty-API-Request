@@ -1,3 +1,7 @@
+"""
+Deleting PagerDuty Users from csv file
+"""
+
 import requests
 import json
 import pandas as pd
