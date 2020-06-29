@@ -1,3 +1,7 @@
+"""
+Get all pagerduty users from API
+"""
+
 import requests
 import pandas as pd
 
@@ -8,6 +12,7 @@ API_KEY = ''
 def list_users():
 
     # Pagination, 100 users per requests for 320 users
+    # Change middle numbers depending on the amount of users
     for offset in range(0, 320, 100):   
         url = 'https://api.pagerduty.com/users?limit=100&offset={0}'.format(offset)
         headers = {
